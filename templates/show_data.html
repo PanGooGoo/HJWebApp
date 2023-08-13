@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Show Data</title>
+</head>
+
+<body>
+    <h1>Data</h1>
+
+
+    <table border="2px">
+        <tr>
+            {% for value in DataFrame %}
+            <th>{{ value }}</th>
+            {% endfor %}
+
+            {% for _,row in DataFrame.iterrows %}
+        <tr>
+            {% for value in row %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tr>
+
+    </table>
+</body>
+
+</html>
